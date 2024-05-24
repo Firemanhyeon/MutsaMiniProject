@@ -238,4 +238,14 @@ select id, name, title, password, content, created_at, updated_at from board ord
 
 ---
 
+![스크린샷 2024-05-24 오후 5 58 32](https://github.com/Firemanhyeon/MutsaMiniProject/assets/134985186/d782090d-39af-41b7-99d6-aaadffd4b089)
+![스크린샷 2024-05-24 오후 5 59 51](https://github.com/Firemanhyeon/MutsaMiniProject/assets/134985186/b194f5ee-678a-4fdc-833e-f56397de8826)
+![스크린샷 2024-05-24 오후 6 00 00](https://github.com/Firemanhyeon/MutsaMiniProject/assets/134985186/a470b1ab-de14-4f7e-8854-46763580cf30)
+![스크린샷 2024-05-24 오후 6 00 32](https://github.com/Firemanhyeon/MutsaMiniProject/assets/134985186/a8ccdc9e-27f7-4954-be49-0714e278fccb)
+![스크린샷 2024-05-24 오후 6 01 21](https://github.com/Firemanhyeon/MutsaMiniProject/assets/134985186/c30079a8-4c0e-40c9-bf9e-75edbe417f64)
+
+
+
 # 끝
+
+
