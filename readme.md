@@ -6,8 +6,6 @@ footer: "TECHIT BACK-END SCHOOL 10"
 
 # 안내서: Spring Boot, Spring Data JDBC, Spring MVC를 이용한 게시판 만들기
 
-- 강경미 (carami@nate.com), 김성박 (urstory@gmail.com)
-
 ---
 
 # 개요
