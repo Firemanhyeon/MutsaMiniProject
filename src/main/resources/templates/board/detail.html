@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+    <title>게시글 상세보기</title>
+    <style>
+        /* CSS 스타일을 여기에 작성하세요 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2; /* 연한 회색 배경색 */
+            border-radius: 10px; /* 모서리를 둥글게 만듭니다. */
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .info {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container" >
+    <div class="title" th:text="${board.title}">게시글 제목</div>
+    <div class="info" th:text="${board.name}">작성자: 작성자 이름</div>
+    <div class="content" th:text="${board.content}">게시글 내용</div>
+    <div class="info" th:text="${#temporals.format(board.createdAt, 'yyyy/MM/dd HH:mm')}">작성일: 2024년 5월 25일</div>
+    <a th:href="@{/board}">돌아가기</a>
+    <a th:href="@{/board/update/{id}(id=${board.id})}">수정하기</a>
+    <a th:href="@{/board/delete/{id}(id=${board.id})}">삭제하기</a>
+</div>

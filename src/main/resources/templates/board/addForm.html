@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AddForm</title>
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+</head>
+<body>
+<div class="container">
+    <h1>게시글 등록</h1>
+    <form th:action="@{/board/addBoard}" th:object="${board}" method="post" class="form-container">
+        <label for="name">이름</label>
+        <input type="text" id="name" th:field="${board.name}" required>
+
+        <label for="title">제목</label>
+        <input type="text" id="title" th:field="${board.title}" required>
+
+        <label for="content">내용</label>
+        <textarea id="content" th:field="${board.content}" required></textarea>
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" th:field="${board.password}" required>
+
+        <input type="submit" th:value="글작성" class="submit-button">
+    </form>
+</div>
+</body>
+</html>

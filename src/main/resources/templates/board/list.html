@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+</head>
+<body>
+<h1>BoardList</h1>
+<table th:if="${boardList}">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>제목</th>
+            <th>이름</th>
+            <th>등록일</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="board : ${boardList}">
+            <td th:text="${board.id}"></td>
+            <td><a th:href="@{board/{id}(id=${board.id})}" th:text="${board.title}"></a></td>
+            <td th:text="${board.name}"></td>
+            <td th:text="${#temporals.format(board.createdAt, 'yyyy/MM/dd')}"></td>
+        </tr>
+    </tbody>
+</table>
+<div th:if="${boardList.totalPages>1}" style="display: block; text-align: center;">
+    <ul>
+        <li th:each="i : ${#numbers.sequence(1, boardList.totalPages)}">
+            <a th:href="@{/board(page=${i})}" th:text="${i}"></a>
+        </li>
+    </ul>
+</div>
+<a th:href="@{board/addBoard}"  style="display: block; text-align: center;">글쓰기</a>
+</body>
+</html>
