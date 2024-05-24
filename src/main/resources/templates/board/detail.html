@@ -35,7 +35,7 @@
     <div class="info" th:text="${board.name}">작성자: 작성자 이름</div>
     <div class="content" th:text="${board.content}">게시글 내용</div>
     <div class="info" th:text="${#temporals.format(board.createdAt, 'yyyy/MM/dd HH:mm')}">작성일: 2024년 5월 25일</div>
-    <a th:href="@{/board}">돌아가기</a>
+    <a th:href="@{/board(page=${page})}">돌아가기</a>
     <a th:href="@{/board/update/{id}(id=${board.id})}">수정하기</a>
     <a th:href="@{/board/delete/{id}(id=${board.id})}">삭제하기</a>
 </div>

@@ -31,8 +31,9 @@ public class BoardController {
     }
 
     //상세페이지이동
-    @GetMapping("/{id}")
-    public String getBoard(@PathVariable Long id , Model model){
+    @GetMapping("/detail")
+    public String getBoard(@RequestParam Long id , @RequestParam int page , Model model){
+        model.addAttribute("page" , page);
         model.addAttribute("board", boardService.getBoardById(id));
         return "board/detail";
     }
