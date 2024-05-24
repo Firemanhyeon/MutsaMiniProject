@@ -120,27 +120,11 @@ select id, name, title, password, content, created_at, updated_at from board ord
 
 ---
 
-![](images/2024-05-11-21-51-06.png)
+
 
 ---
 
-![](images/2024-05-11-21-51-50.png)
 
----
-
-![](images/2024-05-11-21-52-09.png)
-
----
-
-![](images/2024-05-11-21-52-34.png)
-
----
-
-![height:550](images/2024-05-11-21-52-56.png)
-
----
-
-![height:550](images/2024-05-11-21-53-39.png)
 
 ---
 
@@ -160,11 +144,11 @@ select id, name, title, password, content, created_at, updated_at from board ord
 
 ---
 
-![](images/2024-05-11-12-34-42.png)
+
 
 ---
 
-![](images/2024-05-11-12-35-03.png)
+
 
 ---
 
@@ -179,7 +163,7 @@ select id, name, title, password, content, created_at, updated_at from board ord
 
 ---
 
-![](images/2024-05-11-12-35-24.png)
+
 
 ---
 
@@ -193,7 +177,7 @@ select id, name, title, password, content, created_at, updated_at from board ord
 
 ---
 
-![](images/2024-05-11-12-35-51.png)
+
 
 ---
 
@@ -207,7 +191,7 @@ select id, name, title, password, content, created_at, updated_at from board ord
 
 ---
 
-![](images/2024-05-11-12-36-14.png)
+
 
 ---
 
@@ -221,7 +205,6 @@ select id, name, title, password, content, created_at, updated_at from board ord
 
 ---
 
-![](images/2024-05-11-12-36-38.png)
 
 ---
 
