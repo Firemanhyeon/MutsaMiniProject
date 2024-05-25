@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>게시글 등록</h1>
+    <h1>게시글 삭제</h1>
     <form th:action="@{/board/remove}" th:object="${board}" method="post" class="form-container">
         <input type="hidden" th:field="${board.id}">
         <label for="password">비밀번호</label>

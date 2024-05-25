@@ -45,6 +45,7 @@ public class BoardController {
         model.addAttribute("board" ,brd);
         return "board/delete";
     }
+
     //삭제
     @PostMapping("/remove")
     public String removeBoard(@ModelAttribute Board board){
