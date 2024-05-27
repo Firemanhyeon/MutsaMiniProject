@@ -18,7 +18,7 @@ public class BoardService {
     private final BoardRepository boardRepository;
     //페이징처리된 게시글 목록
     public Page<Board> findAllBoardsWithPagination (Pageable pageable){
-        Pageable sortedByDescCreated = PageRequest.of(pageable.getPageNumber() , pageable.getPageSize() , Sort.by(Sort.Direction.DESC,"createdAt"));
+        Pageable sortedByDescCreated = PageRequest.of(pageable.getPageNumber() , pageable.getPageSize() , Sort.by(Sort.Direction.DESC,"createdAt" , "id"));
         return boardRepository.findAll(sortedByDescCreated);
     }
 
