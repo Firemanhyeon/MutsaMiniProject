@@ -32,50 +32,54 @@ public class BoardController {
 
     //상세페이지이동
     @GetMapping("/detail")
-    public String getBoard(@RequestParam Long id , @RequestParam int page , Model model){
+    public String getBoard(@RequestParam Long id ,@RequestParam int page, Model model){
         model.addAttribute("page" , page);
         model.addAttribute("board", boardService.getBoardById(id));
         return "board/detail";
     }
+
     //삭제페이지이동
     @GetMapping("/delete/{id}")
-    public String deleteBoard(@PathVariable Long id , Model model){
+    public String deleteBoard(@PathVariable Long id , @RequestParam int page ,Model model){
         Board brd  = new Board();
         brd.setId(id);
+        model.addAttribute("page" ,page);
         model.addAttribute("board" ,brd);
         return "board/delete";
     }
 
     //삭제
     @PostMapping("/remove")
-    public String removeBoard(@ModelAttribute Board board){
+    public String removeBoard(@ModelAttribute Board board , @RequestParam int page ,Model model , RedirectAttributes redirectAttributes){
+
         if(boardService.removeBoard(board)){
-            return "redirect:/board";
+            return "redirect:/board?page="+page;
         }else{
-            return "redirect:/board/"+board.getId();
+            redirectAttributes.addFlashAttribute("message" , "비밀번호가 틀렸습니다. 다시입력하세요");
+            return "redirect:/board/delete/"+board.getId()+"?page="+page;
         }
 
     }
 
     //수정페이지이동
     @GetMapping("/update/{id}")
-    public String updateBoard(@PathVariable Long id , Model model){
+    public String updateBoard(@PathVariable Long id , @RequestParam int page , Model model){
         Board brd = boardService.getBoardById(id);
-        System.out.println(brd);
+        //brd.setPassword("");
         model.addAttribute("board" , brd);
+        model.addAttribute("page" , page);
         return "board/update";
     }
+
     //수정
     @PostMapping("/modboard")
-    public String modBoard(@ModelAttribute Board board , RedirectAttributes redirectAttributes){
+    public String modBoard(@ModelAttribute Board board ,@RequestParam int page ,RedirectAttributes redirectAttributes){
         if(boardService.modBoard(board)){
-            return "redirect:/board/"+board.getId();
+            return "redirect:/board/detail?id="+board.getId()+"&page="+page;
         }else{
             redirectAttributes.addFlashAttribute("message" , "비밀번호가 틀렸습니다. 다시입력하세요");
-            return "redirect:/board/update/"+board.getId();
-
+            return "redirect:/board/update/"+board.getId()+"?page="+page;
         }
-
     }
     //등록페이지이동
     @GetMapping("/addBoard")

@@ -10,11 +10,13 @@
     <h1>게시글 삭제</h1>
     <form th:action="@{/board/remove}" th:object="${board}" method="post" class="form-container">
         <input type="hidden" th:field="${board.id}">
+        <input type="hidden" name="page" th:value="${page}">
         <label for="password">비밀번호</label>
         <input type="password" id="password" th:field="*{password}" required>
 
         <input type="submit" th:value="글작성" class="submit-button">
     </form>
+<p th:if="${message}" th:text="${message}">
 </div>
 </body>
 </html>
