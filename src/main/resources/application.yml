@@ -2,7 +2,7 @@ spring:
   application:
     name: MutsaMiniProject
   datasource:
-    url: jdbc:mysql://localhost/myDB
-    username: hohyeon
+    url: jdbc:postgresql://svc.sel5.cloudtype.app:31799/myDB
+    username: root
     password: 1234
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: org.postgresql.Driver
