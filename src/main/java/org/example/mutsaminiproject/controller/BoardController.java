@@ -48,6 +48,7 @@ public class BoardController {
         return "board/delete";
     }
 
+
     //삭제
     @PostMapping("/remove")
     public String removeBoard(@ModelAttribute Board board , @RequestParam int page ,Model model , RedirectAttributes redirectAttributes){

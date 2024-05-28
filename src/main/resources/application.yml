@@ -10,4 +10,4 @@ spring:
       connection-timeout: 30000 # 30 seconds
       maximum-pool-size: 10
 server:
-    port: 9000
+    port: 8888
